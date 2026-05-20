@@ -1,0 +1,145 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║              ⚠️  EL CMD SE ABRE Y SE CIERRA RÁPIDO - SOLUCIÓN             ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Si ves que:
+  ❌ Se abre una ventana CMD
+  ❌ Aparecen algunos comandos
+  ❌ Se cierra sola al instante
+
+Significa que hay un ERROR pero no lo ves porque se cierra muy rápido.
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                            ✅ SOLUCIÓN RÁPIDA                              ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+1️⃣  DESCARGA Node.js (si no lo has hecho)
+    - Ve a: https://nodejs.org/
+    - Descarga versión LTS (la verde)
+    - Instala todo por defecto
+    - MUY IMPORTANTE: Marca "Automatically add to PATH"
+    - Reinicia tu computadora
+
+2️⃣  USA EL NUEVO ARCHIVO
+    - Descarga: START_NEXUSMATCH_DEBUG.bat
+    - Doble click en él
+    - ESTA VEZ NO se cerrará automáticamente
+    - Verás mensajes claros
+
+3️⃣  LEE LOS MENSAJES
+    - Si hay error, te dirá exactamente qué está mal
+    - Si está bien, mostrará la URL de tu app
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                        ℹ️  MÁS DETALLES DEL ERROR                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Si aún ves que se cierra rápido con el nuevo archivo, significa que:
+
+OPCIÓN A: Node.js NO está instalado
+  - Solución: Descárgalo de https://nodejs.org/
+
+OPCIÓN B: Node.js está pero tiene problema
+  - Solución: Desinstala e instala de nuevo
+
+OPCIÓN C: Otro problema
+  - Solución: Sigue el PLAN B (abajo)
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    PLAN B: SIN USAR .bat (Manual)                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Si los archivos .bat no funcionan, hazlo manual en CMD:
+
+1. Presiona: Win + R
+2. Escribe: cmd
+3. Presiona: Enter
+4. Se abre CMD (y NO se cierra automáticamente)
+
+5. Ahora escribe PASO A PASO (presionando Enter después de cada línea):
+
+   PASO 1: Ir a la carpeta del proyecto
+   -------
+   cd C:\Users\[TUNOMBRE]\AppData\Roaming\Claude\...
+   
+   (Reemplaza [TUNOMBRE] por tu nombre de usuario)
+   (O simplemente: cd y arrastra la carpeta al CMD)
+
+   PASO 2: Verificar que Node está instalado
+   -------
+   node --version
+   
+   (Si ves un número como v18.0.0, Node.js está OK)
+   (Si ves error, instala Node.js primero)
+
+   PASO 3: Instalar dependencias
+   -------
+   npm install
+   
+   (Espera 2-3 minutos. Verás texto moviéndose)
+   (Cuando termine dirá: added XXX packages)
+
+   PASO 4: Iniciar la app
+   -------
+   npm run dev
+   
+   (Verás mensajes de Vite)
+   (Busca esta línea:
+    ➜  Local:   http://localhost:3000/
+   )
+
+6. ¡LISTO! 
+   - Abre tu navegador
+   - Ve a http://localhost:3000
+   - ¡Verás tu app!
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    ✨ CHECKLIST ANTES DE EMPEZAR                           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Antes de intentar nada, verifica esto:
+
+1. ¿Descargué Node.js desde https://nodejs.org/?
+   □ Sí  □ No (DESCÁRGALO PRIMERO)
+
+2. ¿Lo instalé correctamente?
+   □ Sí  □ No (REINSTALA)
+
+3. ¿Marqué "Automatically add to PATH" en la instalación?
+   □ Sí  □ No (REINSTALA E IMPORTANTE: MARCA ESTA OPCIÓN)
+
+4. ¿Reinicié mi computadora después de instalar Node.js?
+   □ Sí  □ No (REINICIA AHORA)
+
+5. Ahora abre CMD y escribe: node --version
+   ¿Ves un número?
+   □ Sí (v18.0.0 o similar) → CONTINÚA ABAJO
+   □ No (Error) → Reinstala Node.js
+
+Si todo tiene ✓, ahora intenta:
+   - Opción 1: Doble click en START_NEXUSMATCH_DEBUG.bat
+   - Opción 2: Sigue PLAN B (manual en CMD)
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    🎯 RESUMEN SUPER RÁPIDO                                ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+PROBLEMA:  CMD se abre y se cierra rápido
+CAUSA:     Falta Node.js o no está bien instalado
+SOLUCIÓN:  
+  1. Descarga Node.js: https://nodejs.org/
+  2. Instala marcando "Automatically add to PATH"
+  3. Reinicia tu computadora
+  4. Usa START_NEXUSMATCH_DEBUG.bat
+  5. Abre http://localhost:3000
+
+TIEMPO:    15-20 minutos (la mayoría es instalar Node.js)
+RESULTADO: Tu app funcionando
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║           ⚡ Lo más importante: INSTALA NODE.JS CORRECTAMENTE ⚡           ║
+║                                                                            ║
+║  La mayoría de errores vienen de ahí. Si lo haces bien, todo funciona.   ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

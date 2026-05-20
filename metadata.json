@@ -1,0 +1,8 @@
+{
+  "name": "NexusMatch",
+  "description": "Una aplicación para buscar compañeros de juego, chatear y descubrir nuevas partys.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

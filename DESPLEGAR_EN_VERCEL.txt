@@ -1,0 +1,63 @@
+╔════════════════════════════════════════════════════════════════╗
+║         DESPLEGAR NEXUSMATCH EN VERCEL (5 MINUTOS)             ║
+║                    ¡SUPER SIMPLE!                              ║
+╚════════════════════════════════════════════════════════════════╝
+
+PASO 1: CREAR CUENTA EN GITHUB (1 minuto)
+═════════════════════════════════════════════════════════════════
+1. Ve a: https://github.com/signup
+2. Rellena: email, contraseña, username
+3. Confirma tu email
+4. ¡Listo!
+
+PASO 2: CREAR REPOSITORIO (1 minuto)
+═════════════════════════════════════════════════════════════════
+1. Ve a: https://github.com/new
+2. Nombre: nexusmatch
+3. Descripción: Gaming matching app
+4. Haz clic en "Create repository"
+5. Verás una pantalla con instrucciones... IGNORA TODO
+6. Solo copia la URL del repo (empieza con: https://github.com/TU_USERNAME/nexusmatch.git)
+
+PASO 3: SUBIR CÓDIGO A GITHUB (2 minutos)
+═════════════════════════════════════════════════════════════════
+1. Abre Command Prompt (cmd.exe) como Administrador
+2. Navega a tu carpeta outputs:
+   cd C:\Users\jordi\AppData\Local\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\local-agent-mode-sessions\961c6dc9-6e8e-4d36-9541-9a056c039f57\f3afb143-bb75-4bc4-922a-ad93501d9158\local_ea08d351-7dcd-41b9-bfa6-c4a870b2d7cc\outputs
+
+3. Ejecuta estos 5 comandos (copia y pega uno por uno):
+
+   git init
+   git add .
+   git commit -m "NexusMatch MVP"
+   git branch -M main
+   git remote add origin https://github.com/TU_USERNAME/nexusmatch.git
+
+   ⚠️ REEMPLAZA "TU_USERNAME" con tu username de GitHub
+
+4. Último comando:
+   git push -u origin main
+
+   (Te pedirá usuario y contraseña de GitHub)
+
+PASO 4: DESPLEGAR EN VERCEL (1 minuto)
+═════════════════════════════════════════════════════════════════
+1. Ve a: https://vercel.com/signup
+2. Haz clic en "Continue with GitHub"
+3. Autoriza Vercel para acceder a tu GitHub
+4. Haz clic en "Import Project"
+5. Busca "nexusmatch" y haz clic
+6. Presiona "Deploy"
+7. ¡ESPERA 1-2 MINUTOS!
+8. Verás un enlace como: https://nexusmatch-XXXXX.vercel.app
+
+ESE ES TU LINK. ¡Abrelo en el navegador y tu app estará corriendo!
+
+═════════════════════════════════════════════════════════════════
+NOTAS IMPORTANTES:
+- Si git init da error, abre Command Prompt como ADMINISTRADOR
+- Si git push pide contraseña, copia tu token de GitHub en lugar de contraseña
+  (Ve a GitHub Settings > Developer settings > Personal access tokens > Tokens (classic))
+- Si todo falla, dame el error exacto y lo arreglamos
+
+¡Cualquier duda, cuéntame! 🚀

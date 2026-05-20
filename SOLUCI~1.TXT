@@ -1,0 +1,142 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                  ERROR ENOENT - SOLUCIÓN PASO A PASO                       ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+El error es:
+  npm error code ENOENT
+  npm error syscall spawn C:\WINDOWS\system32\cmd.exe
+
+Significa que npm tiene problemas instalando las dependencias correctamente.
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                        ✅ SOLUCIÓN RÁPIDA                                  ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+PASO 1: Presiona Ctrl+C en la ventana donde ves el error
+        (para detener npm)
+
+PASO 2: Escribe estos comandos UNO POR UNO en PowerShell:
+
+        rm -r node_modules -Force
+        rm package-lock.json
+        npm cache clean --force
+        npm install
+
+PASO 3: Espera a que termine
+
+PASO 4: Escribe: npm run dev
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📋 INSTRUCCIONES DETALLADAS                                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+EN POWERSHELL (donde ves el error):
+
+COMANDO 1:
+━━━━━━━━━
+rm -r node_modules -Force
+
+Esto BORRA la carpeta node_modules completa.
+Espera a que termine (dice: PS C:\...\outputs>)
+
+COMANDO 2:
+━━━━━━━━━
+rm package-lock.json
+
+Esto BORRA el archivo de bloqueo de npm.
+
+COMANDO 3:
+━━━━━━━━━
+npm cache clean --force
+
+Esto LIMPIA el caché de npm.
+
+COMANDO 4:
+━━━━━━━━━
+npm install
+
+Esto REINSTALA TODO desde cero.
+Espera 2-3 minutos. Verás mucho texto.
+
+COMANDO 5 (Cuando termine):
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+npm run dev
+
+¡AQUÍ ES DONDE VES SI FUNCIONÓ!
+
+Busca esta línea:
+  ➜  Local:   http://localhost:3000/
+
+Si la ves, ¡ÉXITO!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🎯 VERSIÓN COPY-PASTE (Si no quieres escribir)                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Copia ESTO EXACTO y pégalo en PowerShell:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+rm -r node_modules -Force; rm package-lock.json; npm cache clean --force; npm install
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Presiona Enter una sola vez.
+
+Espera a que termine TODO (puede tardar 3-5 minutos).
+
+Cuando vea "added XXX packages", significa que funcionó.
+
+Luego escribe: npm run dev
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚠️  SI AÚN NO FUNCIONA                                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Si después de "npm install" aún ves errores, intenta:
+
+npm install --legacy-peer-deps
+
+Esto le dice a npm que use una versión más compatible de las dependencias.
+
+Luego: npm run dev
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ✨ DESPUÉS DE npm run dev                                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Cuando ves:
+  ➜  Local:   http://localhost:3000/
+
+1. Abre tu navegador (Chrome, Firefox, Edge)
+
+2. En la dirección, escribe: http://localhost:3000
+
+3. Presiona Enter
+
+4. ¡VERÁS TU APP!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📱 EN TU MÓVIL                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+En PowerShell, busca esta línea:
+  ➜  Network:  http://192.168.X.X:3000/
+
+Copia esa URL.
+
+En tu móvil:
+1. Abre navegador
+2. Pega la URL
+3. Presiona Enter
+4. ¡Verás la app en móvil!
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║         EL COMANDO COPY-PASTE CASI SIEMPRE FUNCIONA.                      ║
+║                                                                            ║
+║     Si no, prueba con: npm install --legacy-peer-deps                     ║
+║                                                                            ║
+║     Cualquier duda, lee el archivo METODO_MANUAL_SIN_BAT.txt              ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

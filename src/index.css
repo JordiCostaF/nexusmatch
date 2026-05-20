@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  body {
+    @apply bg-neutral-950 text-neutral-100;
+    background-image: linear-gradient(135deg, #050505 0%, #0f0f0f 50%, #0a0a0a 100%);
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-400;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg bg-primary-500 text-white font-semibold hover:bg-primary-400 transition-all duration-200 shadow-glow-primary hover:shadow-glow-primary;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg bg-neutral-800 text-neutral-100 font-semibold hover:bg-neutral-700 transition-all duration-200;
+  }
+
+  .btn-accent {
+    @apply px-4 py-2 rounded-lg bg-accent-300 text-neutral-950 font-semibold hover:bg-accent-200 transition-all duration-200 shadow-glow-accent;
+  }
+
+  .card-base {
+    @apply bg-neutral-900/50 backdrop-blur-xl border border-neutral-800 rounded-xl transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card-base hover:bg-neutral-800/50 hover:border-primary-500/50 hover:shadow-glow-primary;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 via-accent-300 to-highlight-300 bg-clip-text text-transparent;
+  }
+
+  .glow-border {
+    @apply border border-transparent bg-clip-padding;
+    background-image: linear-gradient(#050505, #050505), linear-gradient(135deg, #d946a6, #00d9ff, #ff6b35);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }
+}

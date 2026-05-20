@@ -1,0 +1,139 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                 🎮 NEXUSMATCH - GUÍA WINDOWS PASO A PASO                   ║
+║                         (Super fácil y rápido)                             ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📥 PASO 1: DESCARGAR NODE.JS                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Si ves error de "vite no se reconoce", es porque Node.js no está instalado.
+
+1. Abre tu navegador
+2. Ve a: https://nodejs.org/
+3. Descarga la versión LTS (la verde, la más estable)
+4. Abre el instalador descargado
+5. Haz click siguiente hasta terminar
+6. ⚠️  IMPORTANTE: Marca "Automatically add to PATH"
+7. Reinicia tu computadora
+
+Listo. Node.js está instalado.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚙️ PASO 2: USAR EL ARCHIVO START_NEXUSMATCH_FIX.bat                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. Busca el archivo: START_NEXUSMATCH_FIX.bat
+   (Debería estar en tu carpeta de descargas o del proyecto)
+
+2. ¡Doble click en él!
+
+3. Se abre una ventana CMD
+
+4. Espera a que termine (dice "press any key to continue")
+
+   La primera vez tardará 1-2 minutos instalando dependencias.
+   Las próximas veces será más rápido (solo abre la app).
+
+5. Verás esto:
+   
+   📍 Local:     http://localhost:3000
+   📱 URL móvil: http://IP_TU_COMPUTADORA:3000
+
+6. ¡Listo! La app está corriendo
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🌐 PASO 3: ABRIR LA APP EN NAVEGADOR                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. Abre tu navegador (Chrome, Firefox, Edge, etc)
+
+2. En la barra de dirección, escribe: http://localhost:3000
+
+3. Presiona Enter
+
+4. ¡Verás tu app NexusMatch!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📱 PASO 4: VERLO EN TU MÓVIL (Opcional pero útil)                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Necesitas la IP de tu computadora.
+
+1. En tu computadora, abre CMD (presiona Win + R, escribe "cmd", Enter)
+
+2. Escribe: ipconfig
+
+3. Busca "IPv4 Address" - será algo como: 192.168.1.100
+
+4. En tu móvil, abre navegador y escribe:
+   http://192.168.1.100:3000
+   
+   (Usa tu IP real, no este número de ejemplo)
+
+5. ¡Verás la app en tu móvil!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🚨 ¿SI ALGO FALLA?                                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PROBLEMA: Aparece error "vite no se reconoce"
+SOLUCIÓN: Lee SOLUCIONAR_ERROR_VITE.md
+
+PROBLEMA: Puerto 3000 en uso
+SOLUCIÓN: Cierra otras apps o prueba puerto 3001
+         Abre CMD en la carpeta y escribe: npm run dev -- --port 3001
+
+PROBLEMA: No abre nada
+SOLUCIÓN: 
+  1. Cierra el CMD
+  2. Reinicia tu computadora
+  3. Vuelve a ejecutar START_NEXUSMATCH_FIX.bat
+
+PROBLEMA: Aún no funciona
+SOLUCIÓN: Lee SOLUCIONAR_ERROR_VITE.md completo
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 💡 TIPS ÚTILES                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+✓ Crea un acceso directo del .bat en tu escritorio para acceso rápido
+
+✓ La primera ejecución tarda más (instala dependencias)
+  Las siguientes serán más rápidas
+
+✓ Para detener la app: Presiona Ctrl+C en la ventana CMD
+
+✓ Para reiniciar: Cierra CMD y abre el .bat de nuevo
+
+✓ El código está SIEMPRE sincronizado
+  Si editas algo en el código, se actualiza automáticamente en la web
+  Solo recarga la página (F5) para verlo
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📋 CHECKLIST RÁPIDO                                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+✅ Descargué Node.js desde https://nodejs.org/
+✅ Lo instalé correctamente
+✅ Reinicié la computadora
+✅ Tengo el archivo START_NEXUSMATCH_FIX.bat
+✅ Hice doble click en el .bat
+✅ Esperé a que terminara
+✅ Abrí http://localhost:3000 en el navegador
+✅ ¡Veo mi app funcionando!
+
+Si todo está ✅, ¡estás listo!
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║         ¡LISTO! Tu app NexusMatch está corriendo en tu computadora        ║
+║                                                                            ║
+║              Ahora puedes:                                                 ║
+║              📱 Ver en móvil (paso 4)                                     ║
+║              🎨 Hacer cambios en el código                                ║
+║              📋 Seguir el plan de próximas fases                          ║
+║                                                                            ║
+║                          ¡A por la siguiente fase! 🚀                     ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝

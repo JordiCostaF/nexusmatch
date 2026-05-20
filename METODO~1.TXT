@@ -1,0 +1,228 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║            🎮 NEXUSMATCH - MÉTODO MANUAL (SIN ARCHIVOS .bat)              ║
+║                     Este método SIEMPRE funciona                           ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Si los archivos .bat no funcionan, hazlo manualmente. Es más fácil de lo que parece.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚙️ PASO 1: ABRE CMD (Command Prompt)                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Opción A - Rápido:
+  1. Presiona: Win + R (teclas Windows + R juntas)
+  2. Escribe: cmd
+  3. Presiona: Enter
+  4. Se abre una ventana CMD en negro
+
+Opción B - Alternativo:
+  1. Click en botón Inicio (Windows)
+  2. Busca: "cmd" o "Command Prompt"
+  3. Haz click en él
+  4. Se abre CMD
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📁 PASO 2: NAVEGA A TU CARPETA                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Ahora en CMD escribe esto y presiona Enter:
+
+  cd C:\Users\[TUNOMBRE]\AppData\Roaming\Claude
+
+Reemplaza [TUNOMBRE] por tu nombre de usuario real.
+Por ejemplo: cd C:\Users\Jordi\AppData\Roaming\Claude
+
+❓ Si no sabes tu nombre de usuario:
+  Escribe en CMD: %username%
+  Presiona Enter
+  Te dirá tu nombre de usuario
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ✅ PASO 3: VERIFICA QUE ESTÁS EN LA CARPETA CORRECTA                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Escribe: dir
+
+Presiona Enter
+
+Deberías ver muchas carpetas listadas, una de ellas debe ser:
+  - local-agent-mode-sessions
+  - *.config
+
+Si no ves eso, significa que escribiste la ruta mal. Vuelve a intentar PASO 2.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🎮 PASO 4: VE A LA CARPETA DE TU PROYECTO                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Ahora necesitas navegar hasta la carpeta donde está tu proyecto NexusMatch.
+
+La ruta completa será algo como:
+  C:\Users\Jordi\AppData\Roaming\Claude\local-agent-mode-sessions\...
+                                         \outputs\
+
+Escribe esto en CMD (ajusta [TUNOMBRE]):
+
+  cd C:\Users\[TUNOMBRE]\AppData\Roaming\Claude\local-agent-mode-sessions\961c6dc9-6e8e-4d36-9541-9a056c39f57\f3afb143-bb75-4bc4-922a-ad93501d9158\local_ea08d351-7dcd-41b9-bfa6-c4a870b2d7cc\outputs
+
+💡 Atajo más fácil:
+  1. Abre la carpeta en Windows Explorer (Explorador de archivos)
+  2. Busca la carpeta que contiene tu proyecto
+  3. En la barra de dirección (arriba), verás la ruta completa
+  4. Copia la ruta
+  5. En CMD escribe: cd y pega la ruta
+  6. Presiona Enter
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📋 PASO 5: VERIFICA NUEVAMENTE                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Escribe: dir
+
+Deberías ver archivos y carpetas, incluyendo:
+  - src/
+  - package.json
+  - tailwind.config.js
+  - START_NEXUSMATCH_DEBUG.bat
+  - otros archivos
+
+Si los ves, ¡estás en el lugar correcto!
+Si no, vuelve a PASO 4 y revisa la ruta.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🚀 PASO 6: INSTALA DEPENDENCIAS (Primera vez solamente)                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Escribe: npm install
+
+Presiona: Enter
+
+Espera 2-3 minutos. Verás mucho texto moviéndose.
+
+Cuando termine, verás:
+  added XXX packages in X.XXs
+
+Significa que funcionó.
+
+💡 Si da error:
+  - Verifica que Node.js esté instalado (PASO 0)
+  - Intenta: npm install --legacy-peer-deps
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ⚡ PASO 7: INICIA LA APP (Aquí es lo importante)                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Escribe: npm run dev
+
+Presiona: Enter
+
+AHORA MIRA BIEN LA PANTALLA:
+
+Deberías ver algo como esto:
+
+  VITE v5.0.0  dev server running at:
+
+  ➜  Local:   http://localhost:3000/
+  ➜  press h to show help
+
+Copia esa URL: http://localhost:3000/
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🌐 PASO 8: ABRE TU NAVEGADOR                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. Abre Chrome, Firefox, Edge o tu navegador favorito
+
+2. En la barra de dirección (donde pone la URL), escribe:
+   http://localhost:3000
+
+3. Presiona Enter
+
+4. ¡VERÁS TU APP NEXUSMATCH FUNCIONANDO!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📱 BONUS: VER EN TU MÓVIL                                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. En CMD (donde está ejecutándose tu app), busca esta línea:
+   ➜  Network:  http://192.168.X.X:3000
+
+2. Copia esa URL
+
+3. En tu móvil, abre el navegador
+
+4. Pega la URL y presiona Enter
+
+5. ¡Verás tu app en el móvil!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🛑 PARA DETENER LA APP                                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+En la ventana CMD donde está ejecutándose:
+
+Presiona: Ctrl + C
+
+Te preguntará:
+  Terminate batch job (Y/N)?
+
+Escribe: Y
+
+Presiona: Enter
+
+La app se detiene.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ✨ CHECKLIST RÁPIDO - PASO A PASO                                           ║
+└─────────────────────────────────────────────────────────────────────────────┘
+
+□ Tengo Node.js instalado (verificado con: node --version)
+□ Tengo npm (verificado con: npm --version)
+□ Abrí CMD (Win + R → cmd → Enter)
+□ Navegué a mi carpeta del proyecto (cd ...)
+□ Ejecuté: npm install (esperé 2-3 minutos)
+□ Ejecuté: npm run dev (veo la URL http://localhost:3000)
+□ Abrí http://localhost:3000 en mi navegador
+□ ¡VEO MI APP FUNCIONANDO!
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🚨 ERRORES COMUNES                                                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+ERROR: "npm: no se reconoce"
+SOLUCIÓN: Node.js no está instalado. Descárgalo de https://nodejs.org/
+
+ERROR: "No such file or directory"
+SOLUCIÓN: La carpeta no existe. Verifica la ruta en PASO 2 y PASO 4
+
+ERROR: "Port 3000 in use"
+SOLUCIÓN: Otro programa usa el puerto 3000. En CMD escribe:
+  npm run dev -- --port 3001
+  Luego abre: http://localhost:3001
+
+ERROR: "vite command not found"
+SOLUCIÓN: Ejecuta: npm install
+  Luego: npm run dev
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 💡 TIPS IMPORTANTES                                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+✓ La PRIMERA VEZ que ejecutas npm install, tarda 2-3 minutos
+  Las próximas veces es más rápido (solo hace npm run dev)
+
+✓ CMD es tu amigo. Los errores te dicen exactamente qué está mal
+
+✓ Si algo no funciona, LEE EL MENSAJE DE ERROR completamente
+
+✓ Usa copiar/pegar (Ctrl+C / Ctrl+V) para no equivocarte con las rutas
+
+✓ Si se cierra accidentalmente, solo vuelve a hacer PASO 7 (npm run dev)
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║          ¡ESTE MÉTODO FUNCIONA AL 100% SI SIGUES LOS PASOS!              ║
+║                                                                            ║
+║                 Tómate tu tiempo, un paso a la vez.                       ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
